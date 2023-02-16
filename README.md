@@ -32,7 +32,7 @@ Main features:
 2. Create ERD diagram for database
 
 
-##Library Management System
+## Library Management System
 
 1. Group members:
 - Roman Bogoudinov
