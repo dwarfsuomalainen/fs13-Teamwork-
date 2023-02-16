@@ -30,3 +30,16 @@ Main features:
 
 1. Design the API endpoints, following REST API architecture. Only design file needed (either in .txt or diagram, screenshot)
 2. Create ERD diagram for database
+
+
+##Library Management System
+
+1. Group members:
+- Roman Bogoudinov
+- Daniel Moreno
+- Hung Hoang
+- Anna Metsäpelto
+
+2. Responsibilities
+- Planning - All
+- ERD - All
