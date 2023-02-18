@@ -1,7 +1,5 @@
 # Backend project
 
-This assignment requires teamwork. Your team has been assigned one of two topics:
-
 1. Library management system
 Main features:
 
@@ -12,15 +10,6 @@ Main features:
     - Optional: Reviews
     - etc ...
 
-2. E-Commerce Platform
-Main features:
-
-    - Users
-    - Products
-    - Categories
-    - Carts
-    - Optional: Reviews
-    - etc ...
 
 ---
 
@@ -30,6 +19,7 @@ Main features:
 
 1. Design the API endpoints, following REST API architecture. Only design file needed (either in .txt or diagram, screenshot)
 2. Create ERD diagram for database
+![Database ERD](Images/db_erd.png)
 
 
 ## Library Management System
