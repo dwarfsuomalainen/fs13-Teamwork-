@@ -251,3 +251,120 @@
 	"end_date": "03/03/2023"
 }
 ```
+
+# User
+
+# Get All Users
+
+**[GET]** https://api.libary.management/api/v1/users
+
+### Response
+
+```json
+[
+	{
+		"id": 6,
+		"library_card": "2342325",
+		"first_name": "John",
+		"last_name": "Wiki",
+		"email": "John@gmail.com",
+		"phone_number": "1234555"
+		"status": "active",
+		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+	},
+	{
+	...
+	}
+]
+```
+
+# Get A Single User
+
+**[GET]** https://api.libary.management/api/v1/users/{id}
+
+### Response
+
+```json
+
+	{
+		"id": 6,
+		"library_card": "2342325",
+		"first_name": "John",
+		"last_name": "Wiki",
+		"email": "John@gmail.com",
+		"phone_number": "1234555"
+		"status": "active",
+		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+	}
+```
+
+# Create User
+
+**[POST]** https://api.libary.management/api/v1/users/
+
+### Body
+
+```json
+{
+	"first_name": "Nicolas",
+	"last_name": "Jo",
+	"library_card": "2323545",
+	"email": "hello@gmail.com",
+	"phone_number": "1234555"
+}
+```
+
+### Response
+
+```json
+
+	{
+		"id": 6,
+		"library_card": "2323545",
+		"first_name": "Nicolas",
+		"last_name": "Jo",
+		"email": "hello@gmail.com",
+		"phone_number": "1234555"
+		"status": "active",
+		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+	}
+```
+
+# Update User
+
+**[PUT]** https://api.libary.management/api/v1/users/{id}
+
+### Body
+
+```json
+{
+	"email": "hello1@gmail.com",
+	"phone_number": "121212"
+}
+```
+
+### Response
+
+```json
+
+	{
+		"id": 6,
+		"library_card": "2323545",
+		"first_name": "Nicolas",
+		"last_name": "Jo",
+		"email": "hello1@gmail.com",
+		"phone_number": "121212"
+		"status": "active",
+		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+	}
+```
+
+# Delete User
+
+**[DELETE]** https://api.libary.management/api/v1/users/{id}
+
+### Response
+
+```json
+true
+```
