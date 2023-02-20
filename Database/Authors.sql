@@ -8,3 +8,11 @@ where id = 1;
 UPDATE authors
 set biography = 'Writer of the Farseer trilogy. Lives in Washington, USA.'
 WHERE user_id = 2;
+
+SELECT * FROM authors;
+
+SELECT * FROM authors
+WHERE nationality = 'American';
+
+SELECT * FROM authors
+WHERE id = 1;
