@@ -218,6 +218,124 @@
 ```
 
 # Filter Books
+
+**[GET]** The Book endpoint return list of Books with a filter parameter 
+
+**[URL]** https://api.libary.management/api/v1/book/filter/{parameter}
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| author | string | Books filtered by author | Yes |
+| user_id | Number | Books currently borrowed by user | Yes |
+| status | String | Books filtered by status | Yes |
+| category | String | Books filtered by category | Yes |
+| release_year | Number | Book filtered by release year | Yes |
+
+- Filtered by author
+    
+    ### Body
+    
+    ```json
+    	{
+    		"author": "Scott W. Ambler, Pramod J. Sadalage"
+    	}
+    ```
+    
+    ### Response
+    
+    ```json
+    	{		
+    		"id": 3700,
+    		"category_id": "databases",
+    		"title": "Refactoring Databases: Evolutionary Database Design",
+    		"author": "Scott W. Ambler, Pramod J. Sadalage"
+    		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+    	}
+    ```
+    
+- Filtered by user
+    
+    ### Body
+    
+    ```json
+    	{
+    		"user_id": 8767
+    	}
+    ```
+    
+    ### Response
+    
+    ```json
+    		"id": 3700,
+    		"title": "Refactoring Databases: Evolutionary Database Design"
+    	}
+    ```
+    
+- Filtered by status
+    
+    ### Body
+    
+    ```json
+    	{
+    		"status": "borrowed"
+    	}
+    ```
+    
+    ### Response
+    
+    ```json
+    	{		
+    		"id": 3700,
+    	}
+    ```
+    
+- Filtered by category
+    
+    ### Body
+    
+    ```json
+    	{
+    		"category_id": "databases"
+    	}
+    ```
+    
+    ### Response
+    
+    ```json
+    	{		
+    		"id": 3700,
+    		"title": "Refactoring Databases: Evolutionary Database Design"
+    	}
+    ```
+    
+- Filtered by release year
+    
+    ### Body
+    
+    ```json
+    	{
+    		"release_year": "2006"
+    	}
+    ```
+    
+    ### Response
+    
+    ```json
+    	{		
+    		"id": 3700,
+    		"title": "Refactoring Databases: Evolutionary Database Design"
+    	}
+    ```
 # Get All Fines
 
 **[GET]** The F******ines****** endpoint return **Fines** listed, allowing queries bases on **********Fines********** purpose
