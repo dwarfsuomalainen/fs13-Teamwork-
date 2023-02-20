@@ -1,7 +1,7 @@
-INSERT into reminders (sent_type, message)
+INSERT into reminders (user_id, sent_type, message)
 VALUES
-( 'due date', 'test1'),
-('reservation', 'test2');
+(1, 'due date', 'test1'),
+(2, 'reservation', 'test2');
 
 DELETE from reminders
 where id = 1
