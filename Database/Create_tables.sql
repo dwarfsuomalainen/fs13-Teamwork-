@@ -7,7 +7,7 @@ CREATE TABLE roles (
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
   role_id INT,
-  library_card VARCHAR(50) NOT NULL
+  library_card VARCHAR(50) NOT NULL,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	email VARCHAR(100) UNIQUE NOT NULL,
