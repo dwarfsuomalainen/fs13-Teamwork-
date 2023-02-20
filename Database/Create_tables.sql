@@ -13,6 +13,7 @@ CREATE TABLE users (
 	phone_number VARCHAR(18) UNIQUE NOT NULL,
 	status VARCHAR(10),
 	created_at TIMESTAMP DEFAULT NOW(),
+  CONSTRAINT status_type CHECK(status = 'active' OR status = 'blocked')
   CONSTRAINT fk_role FOREIGN KEY(role_id) REFERENCES roles(id)
 );
 
