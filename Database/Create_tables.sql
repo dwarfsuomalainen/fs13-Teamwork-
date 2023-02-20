@@ -1,11 +1,19 @@
+CREATE TABLE roles (
+  id SERIAL PRIMARY KEY,
+  role VARCHAR(50),
+  CONSTRAINT type_roles CHECK(role = 'librarian' OR role = 'customer')
+);
+
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
+  	role_id INT,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	email VARCHAR(100) UNIQUE NOT NULL,
 	phone_number VARCHAR(18) UNIQUE NOT NULL,
 	status VARCHAR(10),
-	created_at TIMESTAMP DEFAULT NOW()
+	created_at TIMESTAMP DEFAULT NOW(),
+  	CONSTRAINT fk_role FOREIGN KEY(role_id) REFERENCES roles(id)
 );
 
 CREATE TABLE authors (
@@ -113,7 +121,3 @@ CREATE TABLE reminders (
 	message TEXT,
 	CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
 );
-
-
-
-
