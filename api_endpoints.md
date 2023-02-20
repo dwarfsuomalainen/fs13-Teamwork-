@@ -553,6 +553,28 @@
 		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
 	}
 ```
+# Check email
+
+**[POST]** This endpoint shows if a user is already registered
+
+**[URL]** https://api.library.management/api/v1/users/is-available
+
+### Body
+
+```json
+{
+	"email": "hello@gmail.com
+}
+```
+
+### Response
+
+```json
+
+	{
+		"isAvailable": false
+	}
+```
 
 # Create User
 
@@ -622,5 +644,146 @@
 ### Response
 
 ```json
-true
+{
+	"user_deleted": true
+}
+```
+# Reminder
+
+# Get All Reminders
+
+**[GET]** The endpoint returns **a** list of reminders
+
+[URL] https://api.library.management/api/v1/reminders
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| id | Number | Reminder’s id |
+| user_id | Number | User’s id |
+| sent_time | Timestamp | Date of sending reminder |
+| sent_type | String | ‘due date | reservation’ |
+| message | String | Message of reminder |
+
+### Response
+
+```json
+[
+	{
+		"id": 6,
+		"*user_id*": "2342325",
+		"sent_type": "due date",
+		"*message*": "test",
+		"*sent_time*": "2023-02-20T00:00:00.000+00:00",
+	},
+	{
+	...
+	}
+]
+```
+
+# Get A Single Reminder
+
+**[GET]** The endpoint returns a single reminder
+
+**[URL]** https://api.library.management/api/v1/reminders/{id}
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| id | Number | ID reminder | Yes |
+
+### Response
+
+```json
+
+	{
+		"id": 6,
+		"*user_id*": "2342325",
+		"sent_type": "due date",
+		"*message*": "test",
+		"*sent_time*": "2023-02-20T00:00:00.000+00:00"
+	}
+```
+
+# Create Reminder
+
+**[POST]** The reminder will be created by sending a post request to the below endpoint
+
+**[URL]** https://api.library.management/api/v1/reminders
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Body
+
+```json
+{
+	"sent_type": "reservation availability",
+	"*message*": "pick up date is available",
+}
+```
+
+### Response
+
+```json
+
+	{
+		"id": 6,
+		"*user_id*": "2342325",
+		"sent_type": "reservation availability",
+		"*message*": "pick up date is available",
+		"*sent_time*": "2023-02-20T00:00:00.000+00:00"
+	}
+```
+
+# Delete Reminder
+
+**[DELETE]** The ************************endpoint allows deleting the reminder
+
+**[URL]** https://api.library.management/api/v1/reminders/{id}
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| id | Number | ID of reminder | Yes |
+
+### Response
+
+```json
+{
+	"reminder_deleted": true
+}
 ```
