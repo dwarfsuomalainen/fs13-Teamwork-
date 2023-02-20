@@ -27,8 +27,8 @@ Main features:
 2. Responsibilities
 - Planning - Team
 - ERD - Team
-- Endpoints and SQL queries:
--- Users - Hung Hoang
--- Books - Roman Bogoudinov
--- Authors, Publishers - Anna Metsäpelto
--- Actions, Fines, Book actions, Auth JWT - Daniel Moreno
+### Endpoints and SQL queries:
+- Users - Hung Hoang
+- Books - Roman Bogoudinov
+- Authors, Publishers - Anna Metsäpelto
+- Actions, Fines, Book actions, Auth JWT - Daniel Moreno 
