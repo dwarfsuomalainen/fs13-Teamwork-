@@ -66,10 +66,10 @@ CREATE TABLE fines (
 	user_id INT,
 	book_copy_id INT,
 	fine_type VARCHAR(50),
-	fin_amount SMALLINT,
+	fine_amount SMALLINT,
 	CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id),
 	CONSTRAINT fk_book_copy FOREIGN KEY(book_copy_id) REFERENCES book_copies(id),
-	CONSTRAINT fine_value CHECK(fine_type = 'late' OR fine_type = 'danaged' OR fine_type = 'lost')
+	CONSTRAINT fine_value CHECK(fine_type = 'late' OR fine_type = 'damaged' OR fine_type = 'lost')
 );
 
 CREATE TABLE book_loans (
