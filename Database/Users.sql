@@ -1,15 +1,4 @@
-//User
 
-CREATE table users (
-    user_id SERIAL PRIMARY KEY,
-    library_card int,
-    first_name varchar(50) not null,
-    last_name varchar(50) not null,
-    email varchar(100) UNIQUE not null,
-    phone_number varchar(30) UNIQUE not null,
-    status varchar(20),
-    user_creation_date timestamp
-)
 
 INSERT into users (library_card, first_name, last_name, email, phone_number, status)
 VALUES
