@@ -19,7 +19,7 @@ CREATE TABLE authors (
 CREATE TABLE book_categories (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(50) UNIQUE,
-	category_id int UNIQUE
+	category_number int UNIQUE
 );
 
 CREATE TABLE books (
