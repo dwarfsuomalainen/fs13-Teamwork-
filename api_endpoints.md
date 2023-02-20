@@ -3,233 +3,13 @@
 
 # Get All Books
 
-**[GET]** The Books endpoint return Books ****listed
+**[GET]** The Books endpoint return Books listed
 
-**[URL]** https://api.libary.management/api/v1/book/all
-
-### Header
-
-- **Authorization**: none
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Parameter
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| id | Number | Book id |
-| category_id | String | Category of a book  |
-| title | String | ID of the book |
-| author | string | Author of the book |
-| description | String | Description of a book |
-
-### Response
-
-```json
-[
-	{
-		"id": 1,
-		"category_id": "programming and software development",
-		"title": "Distributed Systems with Node.js: Building Enterprise-Ready Backend Services",
-		"author": "NONE",
-		"description": "The book covers the process of development of distributed Systems with Node.js for Enterprise-Ready Backend Services" 
-	},
-
-...,
-
-	{
-		"id": 3699,
-		"category_id": "databases",
-		"title": "Database System Concepts",
-		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
-		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-	}
-]
-```
-
-# Get One Book
-
-**[GET]** The Book endpoint return one Book
-
-**[URL]** https://api.libary.management/api/v1/book/{id}
+**[URL]** https://api.libary.management/api/v1/books?{parameter}
 
 ### Header
 
 - **Authorization**: none
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Parameter
-
-| Parameter | Type | Description | Required |
-| --- | --- | --- | --- |
-| id | Number | ID of Book | Yes |
-
-### Response
-
-```json
-	{
-		"id": 3699,
-		"category_id": "databases",
-		"title": "Database System Concepts",
-		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
-		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-	}
-```
-
-# Create Book
-
-**[POST]** You can create a new fines sending a object like the following /book/
-
-**[URL]** https://api.libary.management/api/v1/book/
-
-### Header
-
-- **Authorization**: Bearer {api_key_librarian}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Body
-
-```json
-	{
-		"id": 3700,
-		"category_id": "databases",
-		"title": "Refactoring Databases: Evolutionary Database Design",
-		"author": "Scott W. Ambler, Pramod J. Sadalage"
-		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-	}
-```
-
-### Response
-
-```json
-		"id": 3700,
-		"category_id": "databases",
-		"title": "Refactoring Databases: Evolutionary Database Design",
-		"author": "Scott W. Ambler, Pramod J. Sadalage"
-		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-	}
-```
-
-# Update a Book
-
-**[PATCH]** The Books ************************endpoint allows changing fields of one Book
-
-**[URL]** https://api.library.management/api/v1/book/{id}
-
-### Header
-
-- **Authorization**: Bearer {api_key_librarian}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Parameter
-
-- **ID (Required):** Unique identifier for a fines
-
-### Body
-
-```json
-{
-	"author": "Abraham Silberschatz, Henry F. Korth"
-	
-}
-```
-
-### Response
-
-```json
-	{
-		"id": 3699,
-		"category_id": "databases",
-		"title": "Database System Concepts",
-		"author": "Abraham Silberschatz, Henry F. Korth"
-		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-	}
-```
-
-# Delete Book
-
-**[DELETE]** The Book endpoint allows to delete book
-
-**[URL]** https://api.libary.management/api/v1/book/{id}
-
-**[MULTIPLE DELETES]** Adds the ids separate by **‘,’:**  https://api.libary.management/api/v1/book/1,2,3
-
-### Header
-
-- **Authorization**: Bearer {api_key_librarian}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Parameter
-
-| Parameter | Type | Description | Required |
-| --- | --- | --- | --- |
-| id | Number | Required. ID of the book | Yes |
-
-### Response
-
-```json
-{
-	"book_deleted": true
-}
-```
-
-**[GET]** The Book endpoint return one Book, 
-
-**[URL]** https://api.libary.management/api/v1/book/{id}
-
-### Header
-
-- **Authorization**: Bearer {api_key_librarian}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Parameter
-
-| Parameter | Type | Description | Required |
-| --- | --- | --- | --- |
-| id | Number | ID of Book | Yes |
-
-### Response
-
-```json
-	{
-		"id": 3699,
-		"category_id": "databases",
-		"title": "Database System Concepts",
-		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
-		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-	}
-```
-
-# Filter Books
-
-**[GET]** The Book endpoint return list of Books with a filter parameter 
-
-**[URL]** https://api.libary.management/api/v1/book/filter/{parameter}
-
-### Header
-
-- **Authorization**: Bearer {api_key_librarian}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
 
 ### Parameter
 
@@ -238,8 +18,34 @@
 | author | string | Books filtered by author | Yes |
 | user_id | Number | Books currently borrowed by user | Yes |
 | status | String | Books filtered by status | Yes |
-| category | String | Books filtered by category | Yes |
+| category_name | String | Books filtered by category | Yes |
 | release_year | Number | Book filtered by release year | Yes |
+
+### Response
+
+```json
+[
+	{
+		"id": 1,
+		"category_name": "programming and software development",
+		"category_id": 23,
+		"title": "Distributed Systems with Node.js: Building Enterprise-Ready Backend Services",
+		"author": "John Doe",
+		"description": "The book covers the process of development of distributed Systems with Node.js for Enterprise-Ready Backend Services" 
+	},
+
+...,
+
+	{
+		"id": 3699,
+		"category_name": "databases",
+		"category_id": 23,
+		"title": "Database System Concepts",
+		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
+		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+	}
+]
+```
 
 - Filtered by author
     
@@ -257,6 +63,7 @@
     	{		
     		"id": 3700,
     		"category_id": "databases",
+    		"category_name": 25,
     		"title": "Refactoring Databases: Evolutionary Database Design",
     		"author": "Scott W. Ambler, Pramod J. Sadalage"
     		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
@@ -276,6 +83,7 @@
     ### Response
     
     ```json
+    	{
     		"id": 3700,
     		"title": "Refactoring Databases: Evolutionary Database Design"
     	}
@@ -305,7 +113,7 @@
     
     ```json
     	{
-    		"category_id": "databases"
+    		"category_name": "databases"
     	}
     ```
     
@@ -336,6 +144,116 @@
     		"title": "Refactoring Databases: Evolutionary Database Design"
     	}
     ```
+    
+
+# Get One Book
+
+**[GET]** The Book endpoint return one Book
+
+**[URL]** https://api.libary.management/api/v1/books/{id}
+
+### Header
+
+- **Authorization**: none
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| id | Number | ID of Book | Yes |
+
+### Response
+
+```json
+	{
+		"id": 3699,
+		"category_name": "databases",
+		"category_id": 23,
+		"title": "Database System Concepts",
+		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
+		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+	}
+```
+
+# Create Book
+
+**[POST]** You can create a new book sending a object like the following /book/
+
+**[URL]** https://api.libary.management/api/v1/books/
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | String | Required. Your API key |
+
+### Body
+
+```json
+	{
+		"category_name": "databases",
+		"category_id": 23,
+		"title": "Refactoring Databases: Evolutionary Database Design",
+		"author": "Scott W. Ambler, Pramod J. Sadalage"
+		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+	}
+```
+
+### Response
+
+```json
+		"id": 3700,
+		"category_name": "databases",
+		"category_id": 23,
+		"title": "Refactoring Databases: Evolutionary Database Design",
+		"author": "Scott W. Ambler, Pramod J. Sadalage"
+		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+	}
+```
+
+# Update a Book
+
+**[PATCH]** The Books endpoint allows changing fields of one Book
+
+**[URL]** https://api.library.management/api/v1/books/{id}
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| id | Number | ID of Book | Yes |
+
+### Body
+
+```json
+{
+	"author": "Abraham Silberschatz, Henry F. Korth"
+}
+```
+
+### Response
+
+```json
+	{
+		"id": 3699,
+		"category_id": "databases",
+		"title": "Database System Concepts",
+		"author": "Abraham Silberschatz, Henry F. Korth"
+		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+	}
+```
+
+# Delete Book
 # Get All Fines
 
 **[GET]** The F******ines****** endpoint return **Fines** listed, allowing queries bases on **********Fines********** purpose

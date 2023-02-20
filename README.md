@@ -1,24 +1,18 @@
 # Backend project
 
-1. Library management system
-Main features:
-
+Our team has created a Library management system
+### Main features:
     - Users
     - Books
+    - Fines
     - Authors
-    - Carts
-    - Optional: Reviews
-    - etc ...
+    - Reservations
+    - Waitlist
 
+## Completed parts
 
----
-
-## Requirements
-
-*For team assignment, only 1 member in the team should fork the repo. Then, admin can invite other members to contribute in the same repo. Remember to have develop branch before merging to main. And each feature/schema/bug/issue should have it's own branch, and taken by only 1 member. Before making any new branch, make sure you run `git pull` to avoid the conflicts with the remote repo.*
-
-1. Design the API endpoints, following REST API architecture. Only design file needed (either in .txt or diagram, screenshot)
-2. Create ERD diagram for database
+1. Design of the API endpoints created in a markdown file api_endpoints.md
+2. ERD diagram for database
 ![Database ERD](Images/db_erd.png)
 
 
@@ -31,5 +25,10 @@ Main features:
 - Anna Metsäpelto
 
 2. Responsibilities
-- Planning - All
-- ERD - All
+- Planning - Team
+- ERD - Team
+### Endpoints and SQL queries:
+- Users - Hung Hoang
+- Books - Roman Bogoudinov
+- Authors, Publishers - Anna Metsäpelto
+- Actions, Fines, Book actions, Auth JWT - Daniel Moreno 
