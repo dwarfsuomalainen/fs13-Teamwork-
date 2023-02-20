@@ -20,7 +20,7 @@ Our team has created a Library management system
 
 1. Group members:
 - Roman Bogoudinov
-- Daniel Moreno
+- Daniel Moreno Marquez
 - Hung Hoang
 - Anna Metsäpelto
 
