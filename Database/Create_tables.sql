@@ -105,6 +105,15 @@ CREATE TABLE waitlists (
   CONSTRAINT fk_book FOREIGN KEY(book_id) REFERENCES books(id) ON DELETE CASCADE
 );
 
+CREATE TABLE reminders (
+	id SERIAL PRIMARY KEY,
+	user_id INT,
+	sent_time TIMESTAMP DEFAULT NOW(),
+	sent_type VARCHAR(100),
+	message TEXT,
+	CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
 
 
 
