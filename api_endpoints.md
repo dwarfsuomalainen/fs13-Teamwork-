@@ -640,7 +640,7 @@
 
 # Update User
 
-**[PATCH]** The ************************endpoint allows updating the user data
+**[PATCH]** The endpoint allows updating the user data
 
 **[PATCH]** https://api.library.management/api/v1/users/{id}
 
@@ -685,7 +685,7 @@
 
 # Delete User
 
-**[DELETE]** The ************************endpoint allows deleting the user
+**[DELETE]** The endpoint allows deleting the user
 
 **[URL]** https://api.library.management/api/v1/users/{id}
 
@@ -824,7 +824,7 @@
 
 # Delete Reminder
 
-**[DELETE]** The ************************endpoint allows deleting the reminder
+**[DELETE]** The endpoint allows deleting the reminder
 
 **[URL]** https://api.library.management/api/v1/reminders/{id}
 
