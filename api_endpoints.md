@@ -512,7 +512,26 @@
 
 # Get All Users
 
-**[GET]** https://api.libary.management/api/v1/users
+**[GET]** The Users endpoint returns **a** list of users
+
+[URL] https://api.library.management/api/v1/users
+
+### Header
+
+- **Authorization**: none
+
+### Parameter
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| id | Number | User’s id |
+| library_card | String | Library card |
+| first_name | String | First name |
+| last_name | String | Last name |
+| email | String | Email |
+| phone_number | String | Phone number |
+| status | String | 'active | unactive | pending’ |
+| created_at | Timestamp | Date of creation |
 
 ### Response
 
@@ -536,7 +555,15 @@
 
 # Get A Single User
 
-**[GET]** https://api.libary.management/api/v1/users/{id}
+**[GET]** The user endpoint returns a single user
+
+**[URL]** https://api.library.management/api/v1/users/{id}
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| id | Number | ID user | Yes |
 
 ### Response
 
@@ -553,6 +580,7 @@
 		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
 	}
 ```
+
 # Check email
 
 **[POST]** This endpoint shows if a user is already registered
@@ -578,7 +606,9 @@
 
 # Create User
 
-**[POST]** https://api.libary.management/api/v1/users/
+**[POST]** The user will be created by sending a post request to the below endpoint
+
+**[URL]** https://api.library.management/api/v1/users
 
 ### Body
 
@@ -610,7 +640,23 @@
 
 # Update User
 
-**[PUT]** https://api.libary.management/api/v1/users/{id}
+**[PATCH]** The ************************endpoint allows updating the user data
+
+**[PATCH]** https://api.library.management/api/v1/users/{id}
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| id | Number | ID of user | Yes |
 
 ### Body
 
@@ -639,7 +685,23 @@
 
 # Delete User
 
-**[DELETE]** https://api.libary.management/api/v1/users/{id}
+**[DELETE]** The ************************endpoint allows deleting the user
+
+**[URL]** https://api.library.management/api/v1/users/{id}
+
+### Header
+
+- **Authorization**: Bearer {api_key_librarian}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| id | Number | ID of user | Yes |
 
 ### Response
 
