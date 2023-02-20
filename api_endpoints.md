@@ -5,7 +5,7 @@
 
 **[GET]** The Books endpoint return Books listed
 
-**[URL]** https://api.libary.management/api/v1/books/all?{parameter}
+**[URL]** https://api.libary.management/api/v1/books?{parameter}
 
 ### Header
 
