@@ -6,14 +6,14 @@ CREATE TABLE roles (
 
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
-  	role_id INT,
+  role_id INT,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	email VARCHAR(100) UNIQUE NOT NULL,
 	phone_number VARCHAR(18) UNIQUE NOT NULL,
 	status VARCHAR(10),
 	created_at TIMESTAMP DEFAULT NOW(),
-  	CONSTRAINT fk_role FOREIGN KEY(role_id) REFERENCES roles(id)
+  CONSTRAINT fk_role FOREIGN KEY(role_id) REFERENCES roles(id)
 );
 
 CREATE TABLE authors (
