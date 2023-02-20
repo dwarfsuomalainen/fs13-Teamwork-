@@ -35,10 +35,11 @@ CREATE TABLE book_categories (
 CREATE TABLE books (
 	id SERIAL PRIMARY KEY,
 	category_id INT,
+	author_id INT,
 	title varchar(50) NOT NULL,
 	description text,
 	CONSTRAINT fk_category FOREIGN KEY(category_id) REFERENCES book_categories(id) ON DELETE SET NULL
-	CONSTRAINT fk_author FOREIGN KEY(author_id) REFERENCES book_authors(id) ON DELETE SET NULL
+	/*CONSTRAINT fk_author FOREIGN KEY(author_id) REFERENCES book_authors(id) ON DELETE SET NULL*/
 );
 
 CREATE TABLE book_authors (

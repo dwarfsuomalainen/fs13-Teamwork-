@@ -11,7 +11,7 @@ Our team has created a Library management system
 
 ## Completed parts
 
-1. Design of the API endpoints created in a markdown file api_endpoints.md
+1. Design and documentation of the API endpoints created in a markdown file api_endpoints.md
 2. ERD diagram for database
 ![Database ERD](Images/db_erd.png)
 
@@ -27,8 +27,26 @@ Our team has created a Library management system
 2. Responsibilities
 - Planning - Team
 - ERD - Team
-### Endpoints and SQL queries:
+- Team management - Roman Bogoudinov
+### Endpoints documentation and SQL queries:
 - Users, Reminders - Hung Hoang
 - Books - Roman Bogoudinov
 - Authors, Publishers - Anna Metsäpelto
 - Actions, Fines, Book actions, Auth JWT - Daniel Moreno 
+
+
+## Project structure
+```
+.
+├── Database
+│   ├── Authors.sql
+│   ├── Books_actions.sql
+│   ├── Create_tables.sql
+│   ├── Fines.sql
+│   ├── Reminders.sql
+│   └── Users.sql
+├── Images
+│   └── db_erd.png
+├── README.md
+└── api_endpoints.md
+```
