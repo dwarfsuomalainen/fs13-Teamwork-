@@ -8,7 +8,7 @@ DELETE from users
 where user_id = 1
 
 DELETE from users
-where status like '%unactive%'
+where status like '%blocked%'
 
 UPDATE users
 set user_creation_date = '22-2-2023'
