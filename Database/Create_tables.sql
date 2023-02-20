@@ -7,13 +7,14 @@ CREATE TABLE roles (
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
   role_id INT,
+  library_card VARCHAR(50) NOT NULL,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	email VARCHAR(100) UNIQUE NOT NULL,
 	phone_number VARCHAR(18) UNIQUE NOT NULL,
 	status VARCHAR(10),
 	created_at TIMESTAMP DEFAULT NOW(),
-  CONSTRAINT status_type CHECK(status = 'active' OR status = 'blocked')
+  CONSTRAINT status_type CHECK(status = 'active' OR status = 'blocked'),
   CONSTRAINT fk_role FOREIGN KEY(role_id) REFERENCES roles(id)
 );
 
@@ -27,8 +28,8 @@ CREATE TABLE authors (
 
 CREATE TABLE book_categories (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(50) UNIQUE,
-	category_number int UNIQUE
+	category_name VARCHAR(50) UNIQUE,
+	category_number INT UNIQUE
 );
 
 CREATE TABLE books (
@@ -66,10 +67,10 @@ CREATE TABLE fines (
 	user_id INT,
 	book_copy_id INT,
 	fine_type VARCHAR(50),
-	fin_amount SMALLINT,
+	fine_amount SMALLINT,
 	CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id),
 	CONSTRAINT fk_book_copy FOREIGN KEY(book_copy_id) REFERENCES book_copies(id),
-	CONSTRAINT fine_value CHECK(fine_type = 'late' OR fine_type = 'danaged' OR fine_type = 'lost')
+	CONSTRAINT fine_value CHECK(fine_type = 'late' OR fine_type = 'damaged' OR fine_type = 'lost')
 );
 
 CREATE TABLE book_loans (
