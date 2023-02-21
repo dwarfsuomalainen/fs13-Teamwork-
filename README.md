@@ -16,7 +16,7 @@ This is our Library System Management Design and Documentation Where we show our
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-one-book">Get One Book</a></li>
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#create-book">Create A Book</a></li>
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-a-book">Update A Book</a></li>
-	<li><a href="https:https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-a-book">Delete A Book</a></li> 
+	<li><a href="https:https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-book">Delete A Book</a></li> 
 </details>
 <details>
 	<summary><h2>Books Actions<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#books-actions"></a></h2></summary>
