@@ -61,6 +61,14 @@ This is our Library System Management Design and Documentation Where we show our
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#patch-authors">Patch Authors</a></li>	
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-authors">Delete Authors</a></li>	
 </details>
+<details>
+	<summary><h2>Publishers<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#auth-jwt"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-all-publishers">Get All Publishers</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-one-publisher">Get One Publisher</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#create-publisher">Create Publisher</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#patch-publishers">Patch Publisher</a></li>	
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-publishers">Delete Publisher</a></li>	
+</details>
 
 # Entity Relationship Diagram
 
