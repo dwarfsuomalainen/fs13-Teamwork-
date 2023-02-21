@@ -105,13 +105,6 @@ Where you can find the next:
 - **Reminders**: All queries related to reminders (CRUD)
 - **Users**: All queries related to users (CRUD)
 
-# Endpoints documentation and SQL queries:
-
-- Users, Reminders - [Hung Hoang]()
-- Books - [Roman Bogoudinov](https://github.com/dwarfsuomalainen)
-- Authors, Publishers - [Anna Metsäpelto]()
-- Fines, Book actions, Auth JWT, Create table queries, Documentation(Readme) - [Daniel Moreno](https://github.com/DanielMM161)
-
 # Endpoints
 
 # Books
