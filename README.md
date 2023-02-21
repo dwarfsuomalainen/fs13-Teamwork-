@@ -111,7 +111,7 @@ Where you can find the next:
 
 ## Get All Books
 
-**[GET]** The Books endpoint return Books ****listed
+**[GET]** The Books endpoint return Books listed
 
 **[URL]** https://api.libary.management/api/v1/books?{parameter}
 
