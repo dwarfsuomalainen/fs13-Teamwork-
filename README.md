@@ -164,9 +164,9 @@ Where you can find the next:
     ### Body
     
     ```json
-{
-	"author": "Scott W. Ambler, Pramod J. Sadalage"
-}
+	{
+		"author": "Scott W. Ambler, Pramod J. Sadalage"
+	}
     ```
     
     ### Response
