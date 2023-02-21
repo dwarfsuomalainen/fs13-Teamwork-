@@ -172,14 +172,14 @@ Where you can find the next:
     ### Response
     
     ```json
-    	{		
+	{		
 		"id": 3700,
 		"category_id": "databases",
 		"category_name": 25,
 		"title": "Refactoring Databases: Evolutionary Database Design",
 		"author": "Scott W. Ambler, Pramod J. Sadalage"
 		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-    	}
+	}
     ```
     
 - Filtered by user
@@ -187,18 +187,18 @@ Where you can find the next:
     ### Body
     
     ```json
-    	{
+	{
 		"user_id": 8767
-    	}
+	}
     ```
     
     ### Response
     
     ```json
-{
-	"id": 3700,
-	"title": "Refactoring Databases: Evolutionary Database Design"
-}
+	{
+		"id": 3700,
+		"title": "Refactoring Databases: Evolutionary Database Design"
+	}
     ```
     
 - Filtered by status
@@ -206,17 +206,17 @@ Where you can find the next:
     ### Body
     
     ```json
-    	{
-    		"status": "borrowed"
-    	}
+	{
+		"status": "borrowed"
+	}
     ```
     
     ### Response
     
     ```json
-    	{		
-    		"id": 3700,
-    	}
+	{		
+		"id": 3700,
+	}
     ```
     
 - Filtered by category
@@ -224,18 +224,18 @@ Where you can find the next:
     ### Body
     
     ```json
-    	{
-    		"category_name": "databases"
-    	}
+	{
+		"category_name": "databases"
+	}
     ```
     
     ### Response
     
     ```json
-    	{		
-    		"id": 3700,
-    		"title": "Refactoring Databases: Evolutionary Database Design"
-    	}
+	{		
+		"id": 3700,
+		"title": "Refactoring Databases: Evolutionary Database Design"
+	}
     ```
     
 - Filtered by release year
@@ -243,18 +243,18 @@ Where you can find the next:
     ### Body
     
     ```json
-    	{
-    		"release_year": "2006"
-    	}
+	{
+		"release_year": "2006"
+	}
     ```
     
     ### Response
     
     ```json
-    	{		
-    		"id": 3700,
-    		"title": "Refactoring Databases: Evolutionary Database Design"
-    	}
+	{		
+		"id": 3700,
+		"title": "Refactoring Databases: Evolutionary Database Design"
+	}
     ```
     
 
