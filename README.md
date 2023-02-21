@@ -18,6 +18,13 @@ This is our Library System Management Design and Documentation Where we show our
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-a-book">Update A Book</a></li>
 	<li><a href="https:https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-a-book">Delete A Book</a></li> 
 </details>
+<details>
+	<summary><h2>Fines<a name="https://github.com/DanielMM161/Readme-test/blob/main/README.md#Fines"></a></h2></summary>
+	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#create-fines">Create Fines</a></li>
+	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#create-fine">Create Fine</a></li>
+	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#patch-fines">Patch Fines</a></li>
+	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#delete-fines">Delete Fines</a></li> 
+</details>
 
 # Entity Relationship Diagram
 
@@ -331,6 +338,147 @@ Where you can find the next:
 }
 ```
 
+# **************************Books Actions**************************
+
+## Borrow A Book
+
+**[POST]** You can borrow a book sending a object like the following
+
+**[URL]** https://api.library.management/api/v1/books/borrow
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Body
+
+```json
+{
+	"book_copy_id": 30,
+	"user_id": 25,
+}
+```
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023"
+	"end_date": "03/03/2023"
+	"return_status" false
+}
+```
+
+## Return A Book
+
+**[PUT]** You can return a book sending a object like the following
+
+**[URL]** https://api.library.management/api/v1/books/return
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Body
+
+```json
+{
+	"book_copy_id": 30,
+	"user_id": 25,
+}
+```
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023"
+	"end_date": "03/03/2023"
+	"return_status" true
+}
+```
+
+## Extend Return Time
+
+**[PATCH]** You can extend the time of a book sending a object like the following
+
+**[URL]** https://api.library.management/api/v1/books/return/{book_copy_id}
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Body
+
+```json
+{
+	"endDate": "07/03/2023"
+}
+```
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023"
+	"end_date": "10/03/2023"
+	"return_status" false
+}
+```
+
+## Reserve a Book
+
+**[POST]** You can reserve a book sending a object like this
+
+**[URL]** https://api.library.management/api/v1/books/reserve/{book_copy_id}
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| book_copy_id | Number | Indentifier a single book_copy_id | Yes |
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023"
+	"reservation_status": "ready to be borrowed"
+}
+```
+
 ## Fines
 
 ### Get All Fines
@@ -514,147 +662,6 @@ Where you can find the next:
 ```json
 {
 	"status_process": true
-}
-```
-
-# **************************Books Actions**************************
-
-## Borrow A Book
-
-**[POST]** You can borrow a book sending a object like the following
-
-**[URL]** https://api.library.management/api/v1/books/borrow
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Body
-
-```json
-{
-	"book_copy_id": 30,
-	"user_id": 25,
-}
-```
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"end_date": "03/03/2023"
-	"return_status" false
-}
-```
-
-## Return A Book
-
-**[PUT]** You can return a book sending a object like the following
-
-**[URL]** https://api.library.management/api/v1/books/return
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Body
-
-```json
-{
-	"book_copy_id": 30,
-	"user_id": 25,
-}
-```
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"end_date": "03/03/2023"
-	"return_status" true
-}
-```
-
-## Extend Return Time
-
-**[PATCH]** You can extend the time of a book sending a object like the following
-
-**[URL]** https://api.library.management/api/v1/books/return/{book_copy_id}
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Body
-
-```json
-{
-	"endDate": "07/03/2023"
-}
-```
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"end_date": "10/03/2023"
-	"return_status" false
-}
-```
-
-## Reserve a Book
-
-**[POST]** You can reserve a book sending a object like this
-
-**[URL]** https://api.library.management/api/v1/books/reserve/{book_copy_id}
-
-### Parameter
-
-| Parameter | Type | Description | Required |
-| --- | --- | --- | --- |
-| book_copy_id | Number | Indentifier a single book_copy_id | Yes |
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"reservation_status": "ready to be borrowed"
 }
 ```
 
