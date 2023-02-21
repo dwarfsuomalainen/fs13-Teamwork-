@@ -137,25 +137,25 @@ Where you can find the next:
 
 ```json
 [
-{
-	"id": 1,
-	"category_name": "programming and software development",
-	"category_id": 23,
-	"title": "Distributed Systems with Node.js: Building Enterprise-Ready Backend Services",
-	"author": "John Doe",
-	"description": "The book covers the process of development of distributed Systems with Node.js for Enterprise-Ready Backend Services" 
-},
+	{
+		"id": 1,
+		"category_name": "programming and software development",
+		"category_id": 23,
+		"title": "Distributed Systems with Node.js: Building Enterprise-Ready Backend Services",
+		"author": "John Doe",
+		"description": "The book covers the process of development of distributed Systems with Node.js for Enterprise-Ready Backend Services" 
+	},
 
 ...,
 
-{
-	"id": 3699,
-	"category_name": "databases",
-	"category_id": 23,
-	"title": "Database System Concepts",
-	"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
-	"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-}
+	{
+		"id": 3699,
+		"category_name": "databases",
+		"category_id": 23,
+		"title": "Database System Concepts",
+		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
+		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+	}
 ]
 ```
 
@@ -164,9 +164,9 @@ Where you can find the next:
     ### Body
     
     ```json
-    	{
-		"author": "Scott W. Ambler, Pramod J. Sadalage"
-    	}
+{
+	"author": "Scott W. Ambler, Pramod J. Sadalage"
+}
     ```
     
     ### Response
