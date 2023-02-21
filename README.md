@@ -397,8 +397,7 @@ Where you can find the next:
 }
 ```
 
-# 
-**Books Actions**************************
+# Books Actions
 
 ## Borrow A Book
 
