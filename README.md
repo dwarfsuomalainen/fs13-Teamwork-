@@ -33,6 +33,34 @@ This is our Library System Management Design and Documentation Where we show our
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#patch-fines">Patch Fines</a></li>	
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-fines">Delete Fines</a></li>	
 </details>
+<details>
+	<summary><h2>Auth JWT<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#auth-jwt"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#authentication">Authentication</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-user-session">Get User Session</a></li>	
+</details>
+<details>
+	<summary><h2>User<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#auth-jwt"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-all-users">Get All Users</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-a-single-user">Get A Single User</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#check-email">Check Email</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-user">Update User</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-user">Delete User</a></li>
+</details>
+<details>
+	<summary><h2>Reminder<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#auth-jwt"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-all-reminders">Get All Reminders</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-a-single-reminder">Get A Single Reminder</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#create-reminder">Create A Reminder</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-reminder">Delete Reminder</a></li>	
+</details>
+<details>
+	<summary><h2>Authors<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#auth-jwt"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-all-authors">Get All Authors</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-one-author">Get One Author</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#create-author">Create Author</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#patch-authors">Patch Authors</a></li>	
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-authors">Delete Authors</a></li>	
+</details>
 
 # Entity Relationship Diagram
 
