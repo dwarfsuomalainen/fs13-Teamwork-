@@ -390,7 +390,8 @@ Where you can find the next:
 }
 ```
 
-# **************************Books Actions**************************
+# 
+**Books Actions**************************
 
 ## Borrow A Book
 
@@ -913,7 +914,7 @@ Where you can find the next:
 
 ## Update User
 
-**[PATCH]** The ************************endpoint allows updating the user data
+**[PATCH]** The endpoint allows updating the user data
 
 **[PATCH]** https://api.library.management/api/v1/users/{id}
 
@@ -958,7 +959,7 @@ Where you can find the next:
 
 ## Delete User
 
-**[DELETE]** The ************************endpoint allows deleting the user
+**[DELETE]** The endpoint allows deleting the user
 
 **[URL]** https://api.library.management/api/v1/users/{id}
 
@@ -1096,7 +1097,7 @@ Where you can find the next:
 
 ## Delete Reminder
 
-**[DELETE]** The ************************endpoint allows deleting the reminder
+**[DELETE]** The endpoint allows deleting the reminder
 
 **[URL]** https://api.library.management/api/v1/reminders/{id}
 
@@ -1231,7 +1232,7 @@ Where you can find the next:
 
 ## Patch Authors
 
-**[PATCH]** The Authors ************************endpoint allows changing state of one Author
+**[PATCH]** The Authors endpoint allows changing state of one Author
 
 **[URL]** https://api.library.management/api/v1/authors/{id}
 
@@ -1395,7 +1396,7 @@ Where you can find the next:
 
 ## Patch Publishers
 
-**[PATCH]** The Publishers ************************endpoint allows changing state of one Publisher
+**[PATCH]** The Publishers endpoint allows changing state of one Publisher
 
 **[URL]** https://api.library.management/api/v1/publishers/{id}
 
@@ -1559,7 +1560,7 @@ Where you can find the next:
 
 ## Patch Categories
 
-**[PATCH]** The Categories ************************endpoint allows changing state of one Category
+**[PATCH]** The Categories endpoint allows changing state of one Category
 
 **[URL]** https://api.library.management/api/v1/categories/{id}
 
