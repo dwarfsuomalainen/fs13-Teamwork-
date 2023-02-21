@@ -304,25 +304,26 @@ Where you can find the next:
 ### Body
 
 ```json
-	{
-		"category_name": "databases",
-		"category_number": 0.14,
-		"title": "Refactoring Databases: Evolutionary Database Design",
-		"author": "Scott W. Ambler, Pramod J. Sadalage"
-		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-	}
+{
+	"category_name": "databases",
+	"category_number": 0.14,
+	"title": "Refactoring Databases: Evolutionary Database Design",
+	"author": "Scott W. Ambler, Pramod J. Sadalage"
+	"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+}
 ```
 
 ### Response
 
 ```json
-		"id": 3700,
-		"category_name": "databases",
-		"category_number": 0.14,
-		"title": "Refactoring Databases: Evolutionary Database Design",
-		"author": "Scott W. Ambler, Pramod J. Sadalage"
-		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-	}
+{
+	"id": 3700,
+	"category_name": "databases",
+	"category_number": 0.14,
+	"title": "Refactoring Databases: Evolutionary Database Design",
+	"author": "Scott W. Ambler, Pramod J. Sadalage"
+	"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+}
 ```
 
 ## Update a Book
@@ -356,14 +357,14 @@ Where you can find the next:
 ### Response
 
 ```json
-	{
-		"id": 3699,
-		"category_id": "databases",
-		"category_number": 0.14,
-		"title": "Database System Concepts",
-		"author": "Abraham Silberschatz, Henry F. Korth"
-		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-	}
+{
+	"id": 3699,
+	"category_id": "databases",
+	"category_number": 0.14,
+	"title": "Database System Concepts",
+	"author": "Abraham Silberschatz, Henry F. Korth"
+	"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+}
 ```
 
 ## Delete Book
@@ -745,7 +746,7 @@ Where you can find the next:
 
 ```json
 {
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
+ 	"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
 }
 ```
 
@@ -848,17 +849,16 @@ Where you can find the next:
 ### Response
 
 ```json
-
-	{
-		"id": 6,
-		"library_card": "2342325",
-		"first_name": "John",
-		"last_name": "Wiki",
-		"email": "John@gmail.com",
-		"phone_number": "1234555"
-		"status": "active",
-		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
-	}
+{
+	"id": 6,
+	"library_card": "2342325",
+	"first_name": "John",
+	"last_name": "Wiki",
+	"email": "John@gmail.com",
+	"phone_number": "1234555"
+	"status": "active",
+	"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+}
 ```
 
 ## Check email
@@ -878,10 +878,9 @@ Where you can find the next:
 ### Response
 
 ```json
-
-	{
-		"isAvailable": false
-	}
+{
+	"isAvailable": false
+}
 ```
 
 ## Create User
@@ -905,17 +904,16 @@ Where you can find the next:
 ### Response
 
 ```json
-
-	{
-		"id": 6,
-		"library_card": "2323545",
-		"first_name": "Nicolas",
-		"last_name": "Jo",
-		"email": "hello@gmail.com",
-		"phone_number": "1234555"
-		"status": "active",
-		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
-	}
+{
+	"id": 6,
+	"library_card": "2323545",
+	"first_name": "Nicolas",
+	"last_name": "Jo",
+	"email": "hello@gmail.com",
+	"phone_number": "1234555"
+	"status": "active",
+	"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+}
 ```
 
 ## Update User
@@ -950,17 +948,16 @@ Where you can find the next:
 ### Response
 
 ```json
-
-	{
-		"id": 6,
-		"library_card": "2323545",
-		"first_name": "Nicolas",
-		"last_name": "Jo",
-		"email": "hello1@gmail.com",
-		"phone_number": "121212"
-		"status": "active",
-		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
-	}
+{
+	"id": 6,
+	"library_card": "2323545",
+	"first_name": "Nicolas",
+	"last_name": "Jo",
+	"email": "hello1@gmail.com",
+	"phone_number": "121212"
+	"status": "active",
+	"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+}
 ```
 
 ## Delete User
@@ -1190,13 +1187,13 @@ Where you can find the next:
 ### Response
 
 ```json
-	{
-		"id": 7,
-		"first_name": "Robin",
-		"last_name": "Hobb",
-		"nationality" "American",
-		"biography": "Born in 1952. Real name Margaret Astrid Lindholm Ogden."
-	}
+{
+	"id": 7,
+	"first_name": "Robin",
+	"last_name": "Hobb",
+	"nationality" "American",
+	"biography": "Born in 1952. Real name Margaret Astrid Lindholm Ogden."
+}
 ```
 
 ## Create Author
@@ -1216,24 +1213,24 @@ Where you can find the next:
 ### Body
 
 ```json
-	{
-		"first_name": "Reetta",
-		"last_name": "Vuokko-Syrjänen",
-		"nationality" "Finnish",
-		"biography": "Born in 1985. Writes science fiction and fantasy."
-	}
+{
+	"first_name": "Reetta",
+	"last_name": "Vuokko-Syrjänen",
+	"nationality" "Finnish",
+	"biography": "Born in 1985. Writes science fiction and fantasy."
+}
 ```
 
 ### Response
 
 ```json
-	{
-		"id": 8,
-		"first_name": "Reetta",
-		"last_name": "Vuokko-Syrjänen",
-		"nationality" "Finnish",
-		"biography": "Born in 1985. Writes science fiction and fantasy."
-	}
+{
+	"id": 8,
+	"first_name": "Reetta",
+	"last_name": "Vuokko-Syrjänen",
+	"nationality" "Finnish",
+	"biography": "Born in 1985. Writes science fiction and fantasy."
+}
 ```
 
 ## Patch Authors
@@ -1259,25 +1256,25 @@ Where you can find the next:
 ### Body
 
 ```json
-	{
-		"id": 8,
-		"first_name": "Reetta",
-		"last_name": "Vuokko-Syrjänen",
-		"nationality" "Finnish",
-		"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
-	}
+{
+	"id": 8,
+	"first_name": "Reetta",
+	"last_name": "Vuokko-Syrjänen",
+	"nationality" "Finnish",
+	"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
+}
 ```
 
 ### Response
 
 ```json
-	{
-		"id": 8,
-		"first_name": "Reetta",
-		"last_name": "Vuokko-Syrjänen",
-		"nationality" "Finnish",
-		"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
-	}
+{
+	"id": 8,
+	"first_name": "Reetta",
+	"last_name": "Vuokko-Syrjänen",
+	"nationality" "Finnish",
+	"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
+}
 ```
 
 ## Delete Authors
@@ -1363,10 +1360,10 @@ Where you can find the next:
 ### Response
 
 ```json
-	{
-		"id": 7,
-		"name": "Tammi"
-	}
+{
+	"id": 7,
+	"name": "Tammi"
+}
 ```
 
 ## Create Publisher
@@ -1386,18 +1383,18 @@ Where you can find the next:
 ### Body
 
 ```json
-	{
-		"name": "Otava"
-	}
+{
+	"name": "Otava"
+}
 ```
 
 ### Response
 
 ```json
-	{
-		"id": 8,
-		"name": "Otava"
-	}
+{
+	"id": 8,
+	"name": "Otava"
+}
 ```
 
 ## Patch Publishers
@@ -1423,19 +1420,19 @@ Where you can find the next:
 ### Body
 
 ```json
-	{
-		"id": 8,
-		"name": "Otava Oy"
-	}
+{
+	"id": 8,
+	"name": "Otava Oy"
+}
 ```
 
 ### Response
 
 ```json
-	{
-		"id": 8,
-		"name": "Otava Oy"
-	}
+{
+	"id": 8,
+	"name": "Otava Oy"
+}
 ```
 
 ## Delete Publishers
@@ -1548,20 +1545,20 @@ Where you can find the next:
 ### Body
 
 ```json
-	{
-		"category_name": "Library. Informatics"
-		"category_number": 0.02
-	}
+{
+	"category_name": "Library. Informatics"
+	"category_number": 0.02
+}
 ```
 
 ### Response
 
 ```json
-	{
-		"id": 3,
-		"category_name": "Library. Informatics"
-		"category_number": 0.02
-	}
+{
+	"id": 3,
+	"category_name": "Library. Informatics"
+	"category_number": 0.02
+}
 ```
 
 ## Patch Categories
@@ -1587,21 +1584,21 @@ Where you can find the next:
 ### Body
 
 ```json
-	{
-		"id": 3,
-		"category_name": "Library. Library Science Informatics"
-		"category_number": 0.02
-	}
+{
+	"id": 3,
+	"category_name": "Library. Library Science Informatics"
+	"category_number": 0.02
+}
 ```
 
 ### Response
 
 ```json
-	{
-		"id": 3,
-		"category_name": "Library. Library Science Informatics"
-		"category_number": 0.02
-	}
+{
+	"id": 3,
+	"category_name": "Library. Library Science Informatics"
+	"category_number": 0.02
+}
 ```
 
 ## Delete Categories
