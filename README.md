@@ -137,25 +137,25 @@ Where you can find the next:
 
 ```json
 [
-	{
-		"id": 1,
-		"category_name": "programming and software development",
-		"category_id": 23,
-		"title": "Distributed Systems with Node.js: Building Enterprise-Ready Backend Services",
-		"author": "John Doe",
-		"description": "The book covers the process of development of distributed Systems with Node.js for Enterprise-Ready Backend Services" 
-	},
+{
+	"id": 1,
+	"category_name": "programming and software development",
+	"category_id": 23,
+	"title": "Distributed Systems with Node.js: Building Enterprise-Ready Backend Services",
+	"author": "John Doe",
+	"description": "The book covers the process of development of distributed Systems with Node.js for Enterprise-Ready Backend Services" 
+},
 
 ...,
 
-	{
-		"id": 3699,
-		"category_name": "databases",
-		"category_id": 23,
-		"title": "Database System Concepts",
-		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
-		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-	}
+{
+	"id": 3699,
+	"category_name": "databases",
+	"category_id": 23,
+	"title": "Database System Concepts",
+	"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
+	"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+}
 ]
 ```
 
@@ -165,7 +165,7 @@ Where you can find the next:
     
     ```json
     	{
-    		"author": "Scott W. Ambler, Pramod J. Sadalage"
+		"author": "Scott W. Ambler, Pramod J. Sadalage"
     	}
     ```
     
@@ -173,12 +173,12 @@ Where you can find the next:
     
     ```json
     	{		
-    		"id": 3700,
-    		"category_id": "databases",
-    		"category_name": 25,
-    		"title": "Refactoring Databases: Evolutionary Database Design",
-    		"author": "Scott W. Ambler, Pramod J. Sadalage"
-    		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+		"id": 3700,
+		"category_id": "databases",
+		"category_name": 25,
+		"title": "Refactoring Databases: Evolutionary Database Design",
+		"author": "Scott W. Ambler, Pramod J. Sadalage"
+		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
     	}
     ```
     
@@ -188,17 +188,17 @@ Where you can find the next:
     
     ```json
     	{
-    		"user_id": 8767
+		"user_id": 8767
     	}
     ```
     
     ### Response
     
     ```json
-    	{
-    		"id": 3700,
-    		"title": "Refactoring Databases: Evolutionary Database Design"
-    	}
+{
+	"id": 3700,
+	"title": "Refactoring Databases: Evolutionary Database Design"
+}
     ```
     
 - Filtered by status
