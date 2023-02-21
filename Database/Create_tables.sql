@@ -1,7 +1,7 @@
 CREATE TABLE roles (
   id SERIAL PRIMARY KEY,
   user_role VARCHAR(50),
-  CONSTRAINT type_roles CHECK(role = 'librarian' OR role = 'customer')
+  CONSTRAINT type_roles CHECK(user_role = 'librarian' OR user_role = 'customer')
 );
 
 CREATE TABLE users (
