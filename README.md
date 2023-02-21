@@ -6,9 +6,18 @@ This is our Library System Management Design and Documentation Where we show our
 - Made By:
     - [Roman Bogoudinov](https://github.com/dwarfsuomalainen)
     - [Daniel Moreno](https://github.com/DanielMM161)
-    - [Hung Hoang]()
-    - [Anna Metsäpelto]()
-
+    - [Anna Metsäpelto](https://github.com/annametsapelto)
+    - [Hung Hoang](https://github.com/HungHoang108)
+ 
+# Responsabilities
+- Planning - **Team**
+- ERD - **Team**
+- Team management - [Roman Bogoudinov](https://github.com/dwarfsuomalainen)
+- Endpoints documentation, tables testing and SQL queries: Users, Reminders - [Hung Hoang](https://github.com/HungHoang108)
+- Endpoints documentation, tables testing and SQL queries: Books - [Roman Bogoudinov](https://github.com/dwarfsuomalainen)
+- Endpoints documentation, tables testing and SQL queries: Authors, Publishers - [Anna Metsäpelto](https://github.com/annametsapelto)
+- Endpoints documentation, tables testing and SQL queries: Actions, Fines, Book actions, Auth JWT, Readme Documentation - [Daniel Moreno](https://github.com/DanielMM161)
+    
 # Endpoint Navigation
 <details>
 	<summary><h2>Books<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#books"></a></h2></summary>
