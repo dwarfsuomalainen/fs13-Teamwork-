@@ -1,7 +1,7 @@
 
 # Library System Management
 
-This is our Library System Management Design and Documentation Where we show our ERD and Endpoints.
+This is our library system management design and documentation where we show our ERD and endpoints.
 
 - Made By:
     - [Roman Bogoudinov](https://github.com/dwarfsuomalainen)
@@ -9,13 +9,13 @@ This is our Library System Management Design and Documentation Where we show our
     - [Anna Metsäpelto](https://github.com/annametsapelto)
     - [Hung Hoang](https://github.com/HungHoang108)
  
-# Responsabilities
+# Responsibilities
 - Planning - **Team**
 - ERD - **Team**
 - Team management - [Roman Bogoudinov](https://github.com/dwarfsuomalainen)
 - Endpoints documentation, tables testing and SQL queries: Users, Reminders - [Hung Hoang](https://github.com/HungHoang108)
 - Endpoints documentation, tables testing and SQL queries: Books - [Roman Bogoudinov](https://github.com/dwarfsuomalainen)
-- Endpoints documentation, tables testing and SQL queries: Authors, Publishers - [Anna Metsäpelto](https://github.com/annametsapelto)
+- Endpoints documentation, tables testing and SQL queries: Authors, Publishers, Categories - [Anna Metsäpelto](https://github.com/annametsapelto)
 - Endpoints documentation, tables testing and SQL queries: Actions, Fines, Book actions, Auth JWT, Readme Documentation - [Daniel Moreno](https://github.com/DanielMM161)
     
 # Endpoint Navigation
@@ -89,11 +89,11 @@ This is our Library System Management Design and Documentation Where we show our
 
 # Entity Relationship Diagram
 
-The diagram shows a relationships between the entities:
+The diagram shows the relationships between the entities:
 - user can have different roles (librarian or customer)
 - user can have many reservations
-- book can have many authors and categories
-- one user(customer) can get many reminders from system and also can get many fines in case of loss, damage a book or late return.
+- book can have many authors and copies
+- one user(customer) can get many reminders from system and also can get many fines in case of lost, damaged a book or late return.
 
 ![Database ERD](Images/db_erd.png)
 
