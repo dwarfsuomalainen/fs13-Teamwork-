@@ -769,11 +769,11 @@ Where you can find the next:
 ```json
 {
 	"id": 1,
-  "first_name": "Team 2",
-  "last_name": "Team 2 last name",
-  "email": "team2@mail.com",
-  "phone_number": "047877546",
-  "creation_date": "17/02/2023"
+	"first_name": "Team 2",
+	"last_name": "Team 2 last name",
+	"email": "team2@mail.com",
+	"phone_number": "047877546",
+	"creation_date": "17/02/2023"
 }
 ```
 
