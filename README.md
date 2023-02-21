@@ -69,6 +69,14 @@ This is our Library System Management Design and Documentation Where we show our
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#patch-publishers">Patch Publisher</a></li>	
 	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-publishers">Delete Publisher</a></li>	
 </details>
+<details>
+	<summary><h2>Categories<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#auth-jwt"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-all-categories">Get All Categories</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-one-category">Get One Category</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#create-category">Create Category</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#patch-categories">Patch Categories</a></li>	
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-categories">Delete Categories</a></li>	
+</details>
 
 # Entity Relationship Diagram
 
