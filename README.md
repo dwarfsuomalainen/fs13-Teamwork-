@@ -1,6 +1,6 @@
 # Backend project
 
-Our team has created a Library management system
+Our team has created a Library management system acording the requirements of an assignment. 
 ### Main features:
     - Users
     - Books
