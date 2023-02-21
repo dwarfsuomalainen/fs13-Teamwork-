@@ -277,14 +277,14 @@ Where you can find the next:
 ### Response
 
 ```json
-	{
-		"id": 3699,
-		"category_name": "databases",
-		"category_number": 0.14,
-		"title": "Database System Concepts",
-		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
-		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-	}
+{
+	"id": 3699,
+	"category_name": "databases",
+	"category_number": 0.14,
+	"title": "Database System Concepts",
+	"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
+	"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+}
 ```
 
 ## Create Book
