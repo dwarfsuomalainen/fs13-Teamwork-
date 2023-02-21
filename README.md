@@ -93,14 +93,14 @@ The diagram shows the relationships between the entities:
 - user can have different roles (librarian or customer)
 - user can have many reservations
 - book can have many authors and copies
-- one user(customer) can get many reminders from system and also can get many fines in case of lost, damaged a book or late return.
+- one user(customer) can get many reminders from system and also can get many fines in case of lost, damaged or late books.
 
 ![Database ERD](Images/db_erd.png)
 
 # Database
 
 We stored our queries into the **Database** folder
-Where you can find the next:
+There you can find the following:
 - **Create_tables**: All the queries to create the tables
 - **Authors**: All queries related to authors (CRUD)
 - **Books**: All queries related to books (CRUD)
