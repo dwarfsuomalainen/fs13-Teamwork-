@@ -10,7 +10,14 @@ This is our Library System Management Design and Documentation Where we show our
     - [Anna Metsäpelto]()
 
 # Endpoint Navigation
-
+<details>
+	<summary><h2>Books<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#books"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-all-books">Get All Books</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-one-book">Get One Book</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#create-book">Create A Book</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-a-book">Update A Book</a></li>
+	<li><a href="https:https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-a-book">Delete A Book</a></li> 
+</details>
 
 # Entity Relationship Diagram
 
@@ -255,7 +262,7 @@ Where you can find the next:
 
 ## Update a Book
 
-**[PATCH]** The Books ************************endpoint allows changing fields of one Book
+**[PATCH]** The Books endpoint allows changing fields of one Book
 
 **[URL]** https://api.library.management/api/v1/books/{id}
 
