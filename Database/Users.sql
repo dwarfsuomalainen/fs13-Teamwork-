@@ -1,4 +1,8 @@
 
+INSERT INTO roles(user_role) VALUES
+(‘customer’),
+(‘librarian’)
+
 INSERT into users (role_id, library_card, first_name, last_name, email, phone_number, status)
 VALUES
 (1, 12312342, 'John', 'J', 'jon.j@a.com', '12344556', 'active'),
