@@ -32,14 +32,14 @@ The diagram shows a relationships between the entities:
 - Anna Metsäpelto
 
 2. Responsibilities
-- Planning - Team
-- ERD - Team
-- Team management - Roman Bogoudinov
-### Endpoints documentation and SQL queries:
-- Users, Reminders - Hung Hoang
-- Books - Roman Bogoudinov
-- Authors, Publishers - Anna Metsäpelto
-- Actions, Fines, Book actions, Auth JWT - Daniel Moreno 
+  1. Planning - Team
+  2. ERD - Team
+  3. Team management - Roman Bogoudinov
+  4. Endpoints documentation, tables testing and SQL queries:
+    - Users, Reminders - Hung Hoang
+    - Books - Roman Bogoudinov
+    - Authors, Publishers - Anna Metsäpelto
+    - Actions, Fines, Book actions, Auth JWT - Daniel Moreno 
 
 
 ## Project structure
