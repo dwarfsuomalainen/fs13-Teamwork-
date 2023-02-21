@@ -6,18 +6,29 @@
   (3, 4,'lost', 100);
 
 -- Get All Fines
-  SELECT * FROM FINES;
+  -- Response
+  select f.id, u.first_name as user_name, b.title as book_title, f.fine_type, f.fine_amount
+  from fines f
+  JOIN users u ON u.id = f.user_id
+  JOIN book_copies bc ON bc.id = f.book_copy_id
+  JOIN books b ON b.id = bc.book_id
   -- By user_id param
-  select * from fines where user_id = @user_id
+  where user_id = @user_id
   -- By book_copy_id param
-  select * from fines where book_copy_id = @book_copy_id
+  where book_copy_id = @book_copy_id
   -- By fine_type param
-  select * from fines where fine_type = @fine_type
+  where fine_type = @fine_type
   -- By fine_amount param
-  select * from fines where fine_type = @fine_type
+  where fine_type = @fine_type
 
 -- Get One Fine
-  SELECT * FROM Fines WHERE id = @id_fine;
+  -- Response
+  select f.id, u.first_name as user_name, b.title as book_title, f.fine_type, f.fine_amount
+  from fines f
+  JOIN users u ON u.id = f.user_id
+  JOIN book_copies bc ON bc.id = f.book_copy_id
+  JOIN books b ON b.id = bc.book_id
+  WHERE id = @id_fine;
 
 -- Patch Fines
   UPDATE fines SET fine_amount = 20 WHERE book_copy_id = @book_copy_id;
