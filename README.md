@@ -89,7 +89,11 @@ This is our Library System Management Design and Documentation Where we show our
 
 # Entity Relationship Diagram
 
-Our ERD show relationships between other entities where a user can have different roles (librarian or customer), can have many reservations and many book_loans(checkout), book_copy_status(status of the book), fines(fines of the book) and reminders
+The diagram shows a relationships between the entities:
+- user can have different roles (librarian or customer)
+- user can have many reservations
+- book can have many authors and categories
+- one user(customer) can get many reminders from system and also can get many fines in case of loss, damage a book or late return.
 
 ![Database ERD](Images/db_erd.png)
 
