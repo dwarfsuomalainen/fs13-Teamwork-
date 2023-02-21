@@ -19,11 +19,19 @@ This is our Library System Management Design and Documentation Where we show our
 	<li><a href="https:https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#update-a-book">Delete A Book</a></li> 
 </details>
 <details>
-	<summary><h2>Fines<a name="https://github.com/DanielMM161/Readme-test/blob/main/README.md#Fines"></a></h2></summary>
-	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#create-fines">Create Fines</a></li>
-	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#create-fine">Create Fine</a></li>
-	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#patch-fines">Patch Fines</a></li>
-	<li><a href="https://github.com/DanielMM161/Readme-test/blob/main/README.md#delete-fines">Delete Fines</a></li> 
+	<summary><h2>Books Actions<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#books-actions"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#borrow-a-book">Borrow A Book</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#return-a-book">Return A Book</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#extend-return-time">Extend Return Time</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#reserve-a-book">Reserve A Book</a></li>	
+</details>
+<details>
+	<summary><h2>Fines<a name="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#fines-1"></a></h2></summary>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-all-fines">Get All Fines</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#get-one-fine">Get One Fine</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#create-fine">Create Fine</a></li>
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#patch-fines">Patch Fines</a></li>	
+	<li><a href="https://github.com/dwarfsuomalainen/fs13-Teamwork/tree/dev#delete-fines">Delete Fines</a></li>	
 </details>
 
 # Entity Relationship Diagram
