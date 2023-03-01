@@ -113,25 +113,25 @@ There you can find the following:
 
 # Books
 
-## Get All Books
+# Get All Books
 
-**[GET]** The Books endpoint return Books listed
+**[GET]** The Books endpoint return Books ****listed
 
-**[URL]** https://api.libary.management/api/v1/books?{parameter}
+**[URL]** https://api.libary.management/api/v1/books
 
 ### Header
 
 - **Authorization**: none
 
-### Parameter
+### Query
 
-| Parameter | Type | Description | Required |
-| --- | --- | --- | --- |
-| author | string | Books filtered by author | Yes |
-| user_id | Number | Books currently borrowed by user | Yes |
-| status | String | Books filtered by status | Yes |
-| category_name | String | Books filtered by category | Yes |
-| release_year | Number | Book filtered by release year | Yes |
+| Query | Type | Description |
+| --- | --- | --- |
+| author | String | Books filtered by author |
+| user_id | String | Books currently borrowed by user |
+| status | String | Books filtered by status |
+| category_name | String | Books filtered by category |
+| release_year | String | Book filtered by release year |
 
 ### Response
 
@@ -164,22 +164,24 @@ There you can find the following:
     ### Body
     
     ```json
-	{
-		"author": "Scott W. Ambler, Pramod J. Sadalage"
-	}
+    	{
+    		"author": "Scott W. Ambler, Pramod J. Sadalage"
+    	}
     ```
     
     ### Response
     
     ```json
-	{		
-		"id": 3700,
-		"category_id": "databases",
-		"category_name": 25,
-		"title": "Refactoring Databases: Evolutionary Database Design",
-		"author": "Scott W. Ambler, Pramod J. Sadalage"
-		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-	}
+    [
+    	{		
+    		"id": 3700,
+    		"category_id": "databases",
+    		"category_name": 25,
+    		"title": "Refactoring Databases: Evolutionary Database Design",
+    		"author": "Scott W. Ambler, Pramod J. Sadalage"
+    		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+    	}
+    ]
     ```
     
 - Filtered by user
@@ -187,18 +189,18 @@ There you can find the following:
     ### Body
     
     ```json
-	{
-		"user_id": 8767
-	}
+    	{
+    		"user_id": 8767
+    	}
     ```
     
     ### Response
     
     ```json
-	{
-		"id": 3700,
-		"title": "Refactoring Databases: Evolutionary Database Design"
-	}
+    	{
+    		"id": 3700,
+    		"title": "Refactoring Databases: Evolutionary Database Design"
+    	}
     ```
     
 - Filtered by status
@@ -206,17 +208,17 @@ There you can find the following:
     ### Body
     
     ```json
-	{
-		"status": "borrowed"
-	}
+    	{
+    		"status": "borrowed"
+    	}
     ```
     
     ### Response
     
     ```json
-	{		
-		"id": 3700,
-	}
+    	{		
+    		"id": 3700,
+    	}
     ```
     
 - Filtered by category
@@ -224,18 +226,18 @@ There you can find the following:
     ### Body
     
     ```json
-	{
-		"category_name": "databases"
-	}
+    	{
+    		"category_name": "databases"
+    	}
     ```
     
     ### Response
     
     ```json
-	{		
-		"id": 3700,
-		"title": "Refactoring Databases: Evolutionary Database Design"
-	}
+    	{		
+    		"id": 3700,
+    		"title": "Refactoring Databases: Evolutionary Database Design"
+    	}
     ```
     
 - Filtered by release year
@@ -243,22 +245,22 @@ There you can find the following:
     ### Body
     
     ```json
-	{
-		"release_year": "2006"
-	}
+    	{
+    		"release_year": "2006"
+    	}
     ```
     
     ### Response
     
     ```json
-	{		
-		"id": 3700,
-		"title": "Refactoring Databases: Evolutionary Database Design"
-	}
+    	{		
+    		"id": 3700,
+    		"title": "Refactoring Databases: Evolutionary Database Design"
+    	}
     ```
     
 
-## Get One Book
+# Get One Book
 
 **[GET]** The Book endpoint return one Book
 
@@ -272,22 +274,22 @@ There you can find the following:
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | ID of Book | Yes |
+| id | String | ID of Book | Yes |
 
 ### Response
 
 ```json
-{
-	"id": 3699,
-	"category_name": "databases",
-	"category_number": 0.14,
-	"title": "Database System Concepts",
-	"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
-	"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-}
+	{
+		"id": 3699,
+		"category_name": "databases",
+		"category_number": 0.14,
+		"title": "Database System Concepts",
+		"author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan"
+		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+	}
 ```
 
-## Create Book
+# Create Book
 
 **[POST]** You can create a new book sending a object like the following /book/
 
@@ -304,31 +306,30 @@ There you can find the following:
 ### Body
 
 ```json
-{
-	"category_name": "databases",
-	"category_number": 0.14,
-	"title": "Refactoring Databases: Evolutionary Database Design",
-	"author": "Scott W. Ambler, Pramod J. Sadalage"
-	"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-}
+	{
+		"category_name": "databases",
+		"category_number": 0.14,
+		"title": "Refactoring Databases: Evolutionary Database Design",
+		"author": "Scott W. Ambler, Pramod J. Sadalage"
+		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+	}
 ```
 
 ### Response
 
 ```json
-{
-	"id": 3700,
-	"category_name": "databases",
-	"category_number": 0.14,
-	"title": "Refactoring Databases: Evolutionary Database Design",
-	"author": "Scott W. Ambler, Pramod J. Sadalage"
-	"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
-}
+		"id": 3700,
+		"category_name": "databases",
+		"category_number": 0.14,
+		"title": "Refactoring Databases: Evolutionary Database Design",
+		"author": "Scott W. Ambler, Pramod J. Sadalage"
+		"description": "Refactoring has proven its value in a wide range of developmentprojects, helping software professionals improve system designs, maintainability, extensibility, and performance." 
+	}
 ```
 
-## Update a Book
+# Update a Book
 
-**[PATCH]** The Books endpoint allows changing fields of one Book
+**[PATCH]** The Books ************************endpoint allows changing fields of one Book
 
 **[URL]** https://api.library.management/api/v1/books/{id}
 
@@ -344,7 +345,7 @@ There you can find the following:
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | ID of Book | Yes |
+| id | String | ID of Book | Yes |
 
 ### Body
 
@@ -357,17 +358,17 @@ There you can find the following:
 ### Response
 
 ```json
-{
-	"id": 3699,
-	"category_id": "databases",
-	"category_number": 0.14,
-	"title": "Database System Concepts",
-	"author": "Abraham Silberschatz, Henry F. Korth"
-	"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
-}
+	{
+		"id": 3699,
+		"category_id": "databases",
+		"category_number": 0.14,
+		"title": "Database System Concepts",
+		"author": "Abraham Silberschatz, Henry F. Korth"
+		"description": "Intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level, this book covers concepts and algorithms based on those used in commercial or experimental database systems." 
+	}
 ```
 
-## Delete Book
+# Delete Book
 
 **[DELETE]** The Book endpoint allows to delete book
 
@@ -381,166 +382,23 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Required. ID of the book | Yes |
+| id | String | Required. ID of the book | Yes |
 
 ### Response
 
 ```json
-{
-	"book_deleted": true
-}
+true
 ```
 
-# Books Actions
+# Fines
 
-## Borrow A Book
-
-**[POST]** You can borrow a book sending a object like the following
-
-**[URL]** https://api.library.management/api/v1/books/borrow
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Body
-
-```json
-{
-	"book_copy_id": 30,
-	"user_id": 25,
-}
-```
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"end_date": "03/03/2023"
-	"return_status" false
-}
-```
-
-## Return A Book
-
-**[PUT]** You can return a book sending a object like the following
-
-**[URL]** https://api.library.management/api/v1/books/return
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Body
-
-```json
-{
-	"book_copy_id": 30,
-	"user_id": 25,
-}
-```
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"end_date": "03/03/2023"
-	"return_status" true
-}
-```
-
-## Extend Return Time
-
-**[PATCH]** You can extend the time of a book sending a object like the following
-
-**[URL]** https://api.library.management/api/v1/books/return/{book_copy_id}
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Body
-
-```json
-{
-	"endDate": "07/03/2023"
-}
-```
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"end_date": "10/03/2023"
-	"return_status" false
-}
-```
-
-## Reserve a Book
-
-**[POST]** You can reserve a book sending a object like this
-
-**[URL]** https://api.library.management/api/v1/books/reserve/{book_copy_id}
-
-### Parameter
-
-| Parameter | Type | Description | Required |
-| --- | --- | --- | --- |
-| book_copy_id | Number | Indentifier a single book_copy_id | Yes |
-
-### Header
-
-- **Authorization**: Bearer {api_key}
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| api_key | string | Required. Your API key |
-
-### Response
-
-```json
-{
-	"id": 1,
-	"first_name": "Daniel"
-	"title": "Harry Potter - The chamber of secret",
-	"start_date": "17/02/2023"
-	"reservation_status": "ready to be borrowed"
-}
-```
-
-## Fines
-
-### Get All Fines
+# Get All Fines
 
 **[GET]** The F******ines****** endpoint return **Fines** listed, allowing queries bases on **********Fines********** purpose
 
@@ -552,16 +410,15 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
-### Parameter
+### Query
 
-| Parameter | Type | Description |
+| Query | Type | Description |
 | --- | --- | --- |
-| user_id | Number | Id of the user |
-| book_id | Number | Id of the book |
-| fine_type | String | “lost” | “damaged” | “lost” |
-| fine_amount | Number | Amount of the fine |
+| book | String | Name of the book |
+| fineType | String | “lost” | “damaged” | “lost” |
+| fineAmount | String | Amount of the fine |
 
 ### Response
 
@@ -584,7 +441,7 @@ There you can find the following:
 ]
 ```
 
-## Get One Fine
+# Get One Fine
 
 **[GET]** The F******ines****** endpoint return one ********Fine********, allowing queries bases on **********Fines********** purpose
 
@@ -596,13 +453,13 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Indentifier of Fine | Yes |
+| id | String | Indentifier of Fine | Yes |
 
 ### Response
 
@@ -616,11 +473,11 @@ There you can find the following:
 }
 ```
 
-## Create Fine
+# Create Fine
 
 **[POST]** You can create a new fine sending a object like the following /fines/
 
-**[URL]** https://api.library.management/api/v1/fines/
+**[URL]** https://api.library.management/api/v1/fines
 
 ### Header
 
@@ -653,7 +510,7 @@ There you can find the following:
 }
 ```
 
-## Patch Fines
+# Patch Fines
 
 **[PATCH]** The ************Fines************ endpoint allows changing state of one ********Fine********
 
@@ -694,7 +551,7 @@ There you can find the following:
 }
 ```
 
-## Delete Fines
+# Delete Fines
 
 **[DELETE]** The fines endpoint allows to delete fines
 
@@ -719,14 +576,12 @@ There you can find the following:
 ### Response
 
 ```json
-{
-	"status_process": true
-}
+true
 ```
 
 # Auth JWT
 
-## Authentication
+# Authentication
 
 **[POST]** You can do login sending an object like the following
 
@@ -745,11 +600,11 @@ There you can find the following:
 
 ```json
 {
- 	"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
 }
 ```
 
-## Get User Session
+# Get User Session
 
 **[POST]** You can get the profile the current user with session sending the access token
 
@@ -768,21 +623,21 @@ There you can find the following:
 ```json
 {
 	"id": 1,
-	"first_name": "Team 2",
-	"last_name": "Team 2 last name",
-	"email": "team2@mail.com",
-	"phone_number": "047877546",
-	"creation_date": "17/02/2023"
+  "first_name": "Team 2",
+  "last_name": "Team 2 last name",
+  "email": "team2@mail.com",
+  "phone_number": "047877546",
+  "creation_date": "17/02/2023"
 }
 ```
 
 # User
 
-## Get All Users
+# Get All Users
 
 **[GET]** The Users endpoint returns **a** list of users
 
-[URL] https://api.library.management/api/v1/users
+[**URL**] https://api.library.management/api/v1/users
 
 ### Header
 
@@ -790,20 +645,19 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Librarian API key |
+| api_key | String | Required. Librarian API key |
 
-### Parameter
+### Query
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| id | Number | User’s id |
 | library_card | String | Library card |
-| first_name | String | First name |
-| last_name | String | Last name |
+| firstName | String | First name |
+| lastName | String | Last name |
 | email | String | Email |
-| phone_number | String | Phone number |
+| phoneNumber | String | Phone number |
 | status | String | 'active | unactive | pending’ |
-| created_at | Timestamp | Date of creation |
+| created_at | String | Date of creation |
 
 ### Response
 
@@ -825,7 +679,7 @@ There you can find the following:
 ]
 ```
 
-## Get A Single User
+# Get A Single User
 
 **[GET]** The user endpoint returns a single user
 
@@ -837,7 +691,7 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
@@ -849,18 +703,18 @@ There you can find the following:
 
 ```json
 {
-	"id": 6,
-	"library_card": "2342325",
-	"first_name": "John",
-	"last_name": "Wiki",
-	"email": "John@gmail.com",
-	"phone_number": "1234555"
-	"status": "active",
-	"user_creation_date": "2023-02-20T00:00:00.000+00:00",
-}
+		"id": 6,
+		"library_card": "2342325",
+		"first_name": "John",
+		"last_name": "Wiki",
+		"email": "John@gmail.com",
+		"phone_number": "1234555"
+		"status": "active",
+		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+	}
 ```
 
-## Check email
+# Check email
 
 **[POST]** This endpoint shows if a user is already registered
 
@@ -877,12 +731,13 @@ There you can find the following:
 ### Response
 
 ```json
-{
-	"isAvailable": false
-}
+
+	{
+		"isAvailable": false
+	}
 ```
 
-## Create User
+# Create User
 
 **[POST]** The user will be created by sending a post request to the below endpoint
 
@@ -903,23 +758,24 @@ There you can find the following:
 ### Response
 
 ```json
-{
-	"id": 6,
-	"library_card": "2323545",
-	"first_name": "Nicolas",
-	"last_name": "Jo",
-	"email": "hello@gmail.com",
-	"phone_number": "1234555"
-	"status": "active",
-	"user_creation_date": "2023-02-20T00:00:00.000+00:00",
-}
+
+	{
+		"id": 6,
+		"library_card": "2323545",
+		"first_name": "Nicolas",
+		"last_name": "Jo",
+		"email": "hello@gmail.com",
+		"phone_number": "1234555"
+		"status": "active",
+		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+	}
 ```
 
-## Update User
+# Update User
 
 **[PATCH]** The endpoint allows updating the user data
 
-**[PATCH]** https://api.library.management/api/v1/users/{id}
+**[URL]** https://api.library.management/api/v1/users/{id}
 
 ### Header
 
@@ -927,7 +783,7 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
@@ -948,18 +804,18 @@ There you can find the following:
 
 ```json
 {
-	"id": 6,
-	"library_card": "2323545",
-	"first_name": "Nicolas",
-	"last_name": "Jo",
-	"email": "hello1@gmail.com",
-	"phone_number": "121212"
-	"status": "active",
-	"user_creation_date": "2023-02-20T00:00:00.000+00:00",
-}
+		"id": 6,
+		"library_card": "2323545",
+		"first_name": "Nicolas",
+		"last_name": "Jo",
+		"email": "hello1@gmail.com",
+		"phone_number": "121212"
+		"status": "active",
+		"user_creation_date": "2023-02-20T00:00:00.000+00:00",
+	}
 ```
 
-## Delete User
+# Delete User
 
 **[DELETE]** The endpoint allows deleting the user
 
@@ -971,7 +827,7 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. librarian_api_key |
+| api_key | String | Required. librarian_api_key |
 
 ### Parameter
 
@@ -982,18 +838,155 @@ There you can find the following:
 ### Response
 
 ```json
+true
+```
+
+# Borrow A Book
+
+**[POST]** You can borrow a book sending a object like the following
+
+**[URL]** https://api.library.management/api/v1/users/borrow
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | String | Required. Your API key |
+
+### Body
+
+```json
 {
-	"user_deleted": true
+	"book_copy_id": 30,
+	"user_id": 25,
+}
+```
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023",
+	"end_date": "03/03/2023",
+	"return_status" false
+}
+```
+
+# Return A Book
+
+**[PUT]** You can return a book sending a object like the following
+
+**[URL]** https://api.library.management/api/v1/users/return
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | String | Required. Your API key |
+
+### Body
+
+```json
+{
+	"book_copy_id": 30,
+	"user_id": 25,
+}
+```
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023",
+	"end_date": "03/03/2023",
+	"return_status" true
+}
+```
+
+# Extend Return Time
+
+**[PATCH]** You can extend the time of a book sending a object like the following
+
+**[URL]** https://api.library.management/api/v1/users/return/{book_copy_id}
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | string | Required. Your API key |
+
+### Body
+
+```json
+{
+	"endDate": "07/03/2023"
+}
+```
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023",
+	"end_date": "10/03/2023",
+	"return_status" false
+}
+```
+
+# Reserve a Book
+
+**[POST]** You can reserve a book sending a object like this
+
+**[URL]** https://api.library.management/api/v1/users/reserve/{book_copy_id}
+
+### Header
+
+- **Authorization**: Bearer {api_key}
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| api_key | String | Required. Your API key |
+
+### Parameter
+
+| Parameter | Type | Description | Required |
+| --- | --- | --- | --- |
+| book_copy_id | String | Indentifier a single book_copy_id | Yes |
+
+### Response
+
+```json
+{
+	"id": 1,
+	"first_name": "Daniel"
+	"title": "Harry Potter - The chamber of secret",
+	"start_date": "17/02/2023"
+	"reservation_status": "ready to be borrowed"
 }
 ```
 
 # Reminder
 
-## Get All Reminders
+# Get All Reminders
 
 **[GET]** The endpoint returns **a** list of reminders
 
-[**URL**] https://api.library.management/api/v1/reminders?{parameter}
+[**URL**] https://api.library.management/api/v1/reminders
 
 ### Header
 
@@ -1003,13 +996,12 @@ There you can find the following:
 | --- | --- | --- |
 | api_key | string | Required. Your API key |
 
-### Parameter
+### Query
 
-| Parameter | Type | Description |
+| Query | Type | Description |
 | --- | --- | --- |
-| id | Number | Reminder’s id |
-| user_id | Number | User’s id |
-| sent_time | Timestamp | Date of sending reminder |
+| user_id | String | User’s id |
+| sent_time | String | Date of sending reminder |
 | sent_type | String | ‘due date | reservation’ |
 | message | String | Message of reminder |
 
@@ -1030,7 +1022,7 @@ There you can find the following:
 ]
 ```
 
-## Get A Single Reminder
+# Get A Single Reminder
 
 **[GET]** The endpoint returns a single reminder
 
@@ -1042,13 +1034,13 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | ID reminder | Yes |
+| id | String | ID reminder | Yes |
 
 ### Response
 
@@ -1062,7 +1054,7 @@ There you can find the following:
 }
 ```
 
-## Create Reminder
+# Create Reminder
 
 **[POST]** The reminder will be created by sending a post request to the below endpoint
 
@@ -1074,7 +1066,7 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Body
 
@@ -1097,7 +1089,7 @@ There you can find the following:
 }
 ```
 
-## Delete Reminder
+# Delete Reminder
 
 **[DELETE]** The endpoint allows deleting the reminder
 
@@ -1109,37 +1101,35 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | ID of reminder | Yes |
+| id | String | ID of reminder | Yes |
 
 ### Response
 
 ```json
-{
-	"reminder_deleted": true
-}
+true
 ```
 
 # Authors
 
-## Get All Authors
+# Get All Authors
 
 **[GET]** The Authors endpoint return Authors ****listed, allowing queries bases on Authors purpose
 
-**[URL]** https://api.library.management/api/v1/authors?{parameters}
+**[URL]** https://api.library.management/api/v1/authors
 
 ### Header
 
 - **Authorization**: none
 
-### Parameter
+### Query
 
-| Parameter | Type | Description |
+| Query | Type | Description |
 | --- | --- | --- |
 | first_name | String | First name of the author |
 | last_name | String | Last name of the author |
@@ -1167,7 +1157,7 @@ There you can find the following:
 ]
 ```
 
-## Get One Author
+# Get One Author
 
 **[GET]** The Authors endpoint return one Author, allowing queries bases on Authors purpose
 
@@ -1181,21 +1171,21 @@ There you can find the following:
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Indentifier of Fine | Yes |
+| id | String | Indentifier of Fine | Yes |
 
 ### Response
 
 ```json
-{
-	"id": 7,
-	"first_name": "Robin",
-	"last_name": "Hobb",
-	"nationality" "American",
-	"biography": "Born in 1952. Real name Margaret Astrid Lindholm Ogden."
-}
+	{
+		"id": 7,
+		"first_name": "Robin",
+		"last_name": "Hobb",
+		"nationality" "American",
+		"biography": "Born in 1952. Real name Margaret Astrid Lindholm Ogden."
+	}
 ```
 
-## Create Author
+# Create Author
 
 **[POST]** You can create a new Author sending a object like the following /authors/
 
@@ -1212,27 +1202,27 @@ There you can find the following:
 ### Body
 
 ```json
-{
-	"first_name": "Reetta",
-	"last_name": "Vuokko-Syrjänen",
-	"nationality" "Finnish",
-	"biography": "Born in 1985. Writes science fiction and fantasy."
-}
+	{
+		"first_name": "Reetta",
+		"last_name": "Vuokko-Syrjänen",
+		"nationality" "Finnish",
+		"biography": "Born in 1985. Writes science fiction and fantasy."
+	}
 ```
 
 ### Response
 
 ```json
-{
-	"id": 8,
-	"first_name": "Reetta",
-	"last_name": "Vuokko-Syrjänen",
-	"nationality" "Finnish",
-	"biography": "Born in 1985. Writes science fiction and fantasy."
-}
+	{
+		"id": 8,
+		"first_name": "Reetta",
+		"last_name": "Vuokko-Syrjänen",
+		"nationality" "Finnish",
+		"biography": "Born in 1985. Writes science fiction and fantasy."
+	}
 ```
 
-## Patch Authors
+# Patch Authors
 
 **[PATCH]** The Authors endpoint allows changing state of one Author
 
@@ -1250,33 +1240,33 @@ There you can find the following:
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | ID of Author | Yes |
+| id | String | ID of Author | Yes |
 
 ### Body
 
 ```json
-{
-	"id": 8,
-	"first_name": "Reetta",
-	"last_name": "Vuokko-Syrjänen",
-	"nationality" "Finnish",
-	"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
-}
+	{
+		"id": 8,
+		"first_name": "Reetta",
+		"last_name": "Vuokko-Syrjänen",
+		"nationality" "Finnish",
+		"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
+	}
 ```
 
 ### Response
 
 ```json
-{
-	"id": 8,
-	"first_name": "Reetta",
-	"last_name": "Vuokko-Syrjänen",
-	"nationality" "Finnish",
-	"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
-}
+	{
+		"id": 8,
+		"first_name": "Reetta",
+		"last_name": "Vuokko-Syrjänen",
+		"nationality" "Finnish",
+		"biography": "Born in 1985. Writes science fiction and fantasy. Lives in Tampere."
+	}
 ```
 
-## Delete Authors
+# Delete Authors
 
 **[DELETE]** The Author endpoint allows to delete authors
 
@@ -1290,25 +1280,23 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Required. Id fine | Yes |
+| id | String | Required. Id fine | Yes |
 
 ### Response
 
 ```json
-{
-	"author_deleted": true
-}
+true
 ```
 
 # Publishers
 
-## Get All Publishers
+# Get All Publishers
 
 **[GET]** The Publishers endpoint return Publishers ****listed, allowing queries bases on Publishers purpose
 
@@ -1318,11 +1306,10 @@ There you can find the following:
 
 - **Authorization**: none
 
-### Parameter
+### Query
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| id | Number | Id of the author in the database |
 | name | String | The name of the publisher |
 
 ### Response
@@ -1340,7 +1327,7 @@ There you can find the following:
 ]
 ```
 
-## Get One Publisher
+# Get One Publisher
 
 **[GET]** The Publishers endpoint return one Publisher, allowing queries bases on Publishers purpose
 
@@ -1354,18 +1341,18 @@ There you can find the following:
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Indentifier of Fine | Yes |
+| id | String | Indentifier of Fine | Yes |
 
 ### Response
 
 ```json
-{
-	"id": 7,
-	"name": "Tammi"
-}
+	{
+		"id": 7,
+		"name": "Tammi"
+	}
 ```
 
-## Create Publisher
+# Create Publisher
 
 **[POST]** You can create a new Publisher sending an object like the following /publishers/
 
@@ -1382,21 +1369,21 @@ There you can find the following:
 ### Body
 
 ```json
-{
-	"name": "Otava"
-}
+	{
+		"name": "Otava"
+	}
 ```
 
 ### Response
 
 ```json
-{
-	"id": 8,
-	"name": "Otava"
-}
+	{
+		"id": 8,
+		"name": "Otava"
+	}
 ```
 
-## Patch Publishers
+# Patch Publishers
 
 **[PATCH]** The Publishers endpoint allows changing state of one Publisher
 
@@ -1414,27 +1401,27 @@ There you can find the following:
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Indentifier of publisher | Yes |
+| id | String | Indentifier of publisher | Yes |
 
 ### Body
 
 ```json
-{
-	"id": 8,
-	"name": "Otava Oy"
-}
+	{
+		"id": 8,
+		"name": "Otava Oy"
+	}
 ```
 
 ### Response
 
 ```json
-{
-	"id": 8,
-	"name": "Otava Oy"
-}
+	{
+		"id": 8,
+		"name": "Otava Oy"
+	}
 ```
 
-## Delete Publishers
+# Delete Publishers
 
 **[DELETE]** The Publishers endpoint allows to delete publishers
 
@@ -1448,41 +1435,38 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Required. Id fine | Yes |
+| id | String | Required. Id fine | Yes |
 
 ### Response
 
 ```json
-{
-	"publisher_deleted": true
-}
+true
 ```
 
 # Categories
 
-## Get All Categories
+# Get All Categories
 
 **[GET]** The Categories endpoint return Categories ****listed, allowing queries bases on Categories purpose
 
-**[URL]** https://api.library.management/api/v1/categories?{parameter}
+**[URL]** https://api.library.management/api/v1/categories
 
 ### Header
 
 - **Authorization**: none
 
-### Parameter
+### Query
 
-| Parameter | Type | Description |
+| Query | Type | Description |
 | --- | --- | --- |
-| id | Number | Id of the author in the database |
 | name | String | Name of the category |
-| category_number | Number | The number of the category according to YKL |
+| category_number | String | The number of the category according to YKL |
 
 ### Response
 
@@ -1490,18 +1474,18 @@ There you can find the following:
 [
 	{
 		"id": 1,
-		"category_name": "Books"
-		"category_number": 0.00
+		"category_name": "Books",
+		"category_number": 0
 	},
 	{
 		"id": 2,
-		"category_name": "Bibliography"
-		"category_number": 0.01
+		"category_name": "Bibliography",
+		"category_number": 1
 	}
 ]
 ```
 
-## Get One Category
+# Get One Category
 
 **[GET]** The Categories endpoint return one Category, allowing queries bases on Categories purpose
 
@@ -1515,19 +1499,19 @@ There you can find the following:
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Indentifier of Category | Yes |
+| id | String | Indentifier of Category | Yes |
 
 ### Response
 
 ```json
 {
 	"id": 2,
-	"category_name": "Bibliography"
-	"category_number": 0.01
+	"category_name": "Bibliography",
+	"category_number": 1
 }
 ```
 
-## Create Category
+# Create Category
 
 **[POST]** You can create a new Category sending an object like the following /categories/
 
@@ -1539,28 +1523,28 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Body
 
 ```json
-{
-	"category_name": "Library. Informatics"
-	"category_number": 0.02
-}
+	{
+		"category_name": "Library. Informatics"
+		"category_number": 2
+	}
 ```
 
 ### Response
 
 ```json
-{
-	"id": 3,
-	"category_name": "Library. Informatics"
-	"category_number": 0.02
-}
+	{
+		"id": 3,
+		"category_name": "Library. Informatics"
+		"category_number": 2
+	}
 ```
 
-## Patch Categories
+# Patch Categories
 
 **[PATCH]** The Categories endpoint allows changing state of one Category
 
@@ -1572,35 +1556,35 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Indentifier of Category | Yes |
+| id | String | Indentifier of Category | Yes |
 
 ### Body
 
 ```json
-{
-	"id": 3,
-	"category_name": "Library. Library Science Informatics"
-	"category_number": 0.02
-}
+	{
+		"id": 3,
+		"category_name": "Library. Library Science Informatics",
+		"category_number": 2
+	}
 ```
 
 ### Response
 
 ```json
-{
-	"id": 3,
-	"category_name": "Library. Library Science Informatics"
-	"category_number": 0.02
-}
+	{
+		"id": 3,
+		"category_name": "Library. Library Science Informatics",
+		"category_number": 2
+	}
 ```
 
-## Delete Categories
+# Delete Categories
 
 **[DELETE]** The Categories endpoint allows to delete Categories
 
@@ -1614,34 +1598,16 @@ There you can find the following:
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| api_key | string | Required. Your API key |
+| api_key | String | Required. Your API key |
 
 ### Parameter
 
 | Parameter | Type | Description | Required |
 | --- | --- | --- | --- |
-| id | Number | Required. Id fine | Yes |
+| id | String | Required. Id fine | Yes |
 
 ### Response
 
 ```json
-{
-	"category_deleted": true
-}
-```
-
-# Project structure
-```
-.
-├── Database
-│   ├── Authors.sql
-│   ├── Books_actions.sql
-│   ├── Create_tables.sql
-│   ├── Fines.sql
-│   ├── Reminders.sql
-│   └── Users.sql
-├── Images
-│   └── db_erd.png
-├── README.md
-└── api_endpoints.md
+true
 ```
