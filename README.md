@@ -329,7 +329,7 @@ There you can find the following:
 
 # Update a Book
 
-**[PATCH]** The Books ************************endpoint allows changing fields of one Book
+**[PATCH]** The Books endpoint allows changing fields of one Book
 
 **[URL]** https://api.library.management/api/v1/books/{id}
 
@@ -1119,7 +1119,7 @@ true
 
 # Get All Authors
 
-**[GET]** The Authors endpoint return Authors ****listed, allowing queries bases on Authors purpose
+**[GET]** The Authors endpoint return Authors listed, allowing queries bases on Authors purpose
 
 **[URL]** https://api.library.management/api/v1/authors
 
@@ -1298,7 +1298,7 @@ true
 
 # Get All Publishers
 
-**[GET]** The Publishers endpoint return Publishers ****listed, allowing queries bases on Publishers purpose
+**[GET]** The Publishers endpoint return Publishers listed, allowing queries bases on Publishers purpose
 
 **[URL]** https://api.library.management/api/v1/publishers
 
